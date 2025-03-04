@@ -4,11 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+
     <title>Document</title>
 </head>
 
 <body>
+    <div class="container">
+        <div>
+            <h1>Öğrenci Tablosu</h1>
+            <table id="students">
+                <thead>
+                    <tr>
+                        <th>Öğrenci Adı</th>
+                        <th>Dersi</th>
+                        <th>Notu</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div>
+            <h1>Tabloya Veri Ekle</h1>
+            <div class="inputArea">
+                <div class="input_container">
+                    <label for="studentName">Name:</label>
+                    <input type="text" id="studentName" placeholder="Öğrenci Adı">
+                </div>
 
+                <div class="input_container"><label for="studentCourse">Ders Adı:</label>
+                    <input type="text" id="studentCourse" placeholder="Öğrenci Dersi">
+                </div>
+                <div class="input_container">
+                    <label for="studentGrade">Ders Notu:</label>
+                    <input type="number" id="studentGrade" placeholder="Öğrenci Notu">
+                </div>
+
+                <button id="formBtn">Tabloya Ekle</button>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>

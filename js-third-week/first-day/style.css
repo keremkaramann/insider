@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 50px;
+}
+#students tr thead {
+  font-weight: bold;
+  font-size: 18px;
+}
+.inputArea {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.inputArea input {
+  padding: 15px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 18px;
+}
+.inputArea button {
+  background-color: rgb(9, 163, 9);
+  border: 2px solid;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+.input_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
