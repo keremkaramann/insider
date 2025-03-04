@@ -22,7 +22,6 @@ $(function () {
   /* input focus */
   $(".inputArea input").focus(function () {
     $(this).css({
-      "border-color": "grey",
       "background-color": "rgba(36, 117, 250, 0.3)",
       transform: "scale(1.05)",
     });
@@ -30,7 +29,6 @@ $(function () {
 
   $(".inputArea input").blur(function () {
     $(this).css({
-      "border-color": "grey",
       "background-color": "rgba(202, 2, 2, 0.3)",
       transform: "scale(1)",
     });
@@ -50,6 +48,7 @@ $(function () {
       $("#students tbody").append(row);
     });
   }
+
   updateTable();
 
   $("#formBtn").click(function () {
