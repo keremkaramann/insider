@@ -18,9 +18,11 @@ $(function () {
           </div>
             `);
           cards.push(newCard);
+          console.log(newCard);
+          $(".slider").append(cards);
         });
         $(".card_container").append(cards);
-        $(".card").fadeIn(1000);
+        $(".card").fadeIn(800);
       })
       .fail(function () {
         alert("API ERROR!");
@@ -32,5 +34,14 @@ $(function () {
   //shake func
   $(".card_container").on("click", ".shakeButton", function () {
     $(this).closest(".card").effect("shake", { times: 3, distance: 10 }, 500);
+  });
+  $(".slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+    arrows: true,
   });
 });
