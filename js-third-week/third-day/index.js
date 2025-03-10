@@ -18,10 +18,11 @@ $(function () {
           </div>
             `);
           cards.push(newCard);
-          console.log(newCard);
-          $(".slider").append(cards);
+
+          $(".card_container").append(newCard);
+          $(".slider").append(newCard);
         });
-        $(".card_container").append(cards);
+
         $(".card").fadeIn(800);
       })
       .fail(function () {

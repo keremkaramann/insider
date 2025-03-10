@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+button {
+  cursor: pointer;
+  padding: 8px 15px;
+  color: black;
+  border-radius: 20px;
+}
+a {
+  text-decoration: none;
+}
+.container h1 {
+  margin: 30px;
+}
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_container h2 {
+  color: black !important;
+}
+.container {
+  text-align: center;
+}
+.product_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 50px;
+  margin: 50px;
+}
+.card-element {
+  width: 30%;
+  height: 600px;
+  border: 1px solid rgba(185, 185, 185, 0.9);
+  padding: 10px;
+  display: none;
+}
+.card-element img {
+  width: 100%;
+  max-width: 65%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+.checked {
+  color: orange;
+}
+
+#addToCart:hover {
+  background-color: rgb(25, 151, 234);
+  transition: all 0.3s linear;
+}
+#seeDetails:hover {
+  background-color: rgb(250, 197, 53);
+  transition: all 0.3s linear;
+}
+#deleteProduct:hover {
+  background-color: rgb(230, 26, 26);
+  transition: all 0.3s linear;
+}
+.card_info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.card_tooltip {
+  display: none;
+}
+.tooltip_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.card_tooltip img {
+  max-width: 30%;
+  border-radius: 8px;
+}
+#searchProduct {
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.lableSearch {
+  font-weight: bold;
+}
+#cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+.cart-item {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin: 20px;
+  border: 1px solid seagreen;
+}
+.cart-item img {
+  width: 20%;
+}
+#clearCart {
+  margin: 20px;
+}

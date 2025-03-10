@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div class="header_container">
+                <h1>Ürünler</h1>
+                <a href="#goToCart">
+                    <h2>Sepeti Görmek için Tıkla</h2>
+                </a>
+            </div>
+
+            <label for="searchProduct" class="lableSearch">Ürün Ara : </label>
+            <input type="text" id="searchProduct" placeholder="Ürün Adı">
+        </div>
+        <div class="product_container">
+            <div id="templateCard" class="card-element">
+                <div>
+                    <a href="" data-fancybox="gallery" data-caption="">
+                        <img src="" alt="" />
+                    </a>
+                </div>
+                <div class="card_info">
+                    <p class="title"></p>
+                    <div class="rating">
+                        <p> <span class="fa fa-star checked"></span> <span class="rate"></span></p>
+                        <p> (<span class="count"></span>)</p>
+                    </div>
+                    <div class="price">
+                        <p>Price: <span class="priceAmount"></span>$</p>
+                    </div>
+                    <div>
+                        <button class="addToCart">Sepete Ekle</button>
+                        <button class="seeDetails" data-fancybox="product-details" data-src="">
+                            Detay Göster
+                        </button>
+                        <button class="deleteProduct">Ürünü Sil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="goToCart">
+            <h2>Sepetim</h2>
+            <div id="cart">
+
+
+            </div>
+        </div>
+        <button id="clearCart">Sepeti Temizle</button>
+    </div>
+    <div class="cart_container"></div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
