@@ -1,4 +1,5 @@
 $(function () {
+  let appendLocation = ".ins-api-users";
   const oneDay = 24 * 60 * 60 * 1000;
   let currentTime = new Date().getTime();
 
@@ -21,10 +22,16 @@ $(function () {
         color: white;
         cursor: pointer;
       }
+      .fetch-btn {
+       padding: 10px;
+        border-radius: 5px;
+        background-color: green;
+        color: white;
+        cursor: pointer;
+      }
         `;
     const style = document.createElement("style");
     style.textContent = css;
-
     document.head.appendChild(style);
   };
 
@@ -102,6 +109,30 @@ $(function () {
       renderUsers(updatedUserData);
     }
   };
+
+  const observeChanges = () => {
+    const targetNode = document.querySelector(appendLocation);
+    const config = { childList: true };
+
+    const observer = new MutationObserver(() => {
+      if (
+        !$(appendLocation).children().length &&
+        !sessionStorage.getItem("fetchClicked")
+      ) {
+        const fetchBtn =
+          '<button class="fetch-btn">Kullanıcıları Geri Getir</button>';
+        $(appendLocation).append(fetchBtn);
+        $(".fetch-btn").on("click", () => {
+          sessionStorage.setItem("fetchClicked", "true");
+          fetchUsers();
+        });
+      }
+    });
+
+    observer.observe(targetNode, config);
+  };
+
+  observeChanges();
 
   fetchUsers();
 });

@@ -1,0 +1,5 @@
+İlk başta browser(live server) dan projenin ne olduğunu görmek istedim. Hemen gözüme çarpan kısım Toplam sepet miktarını
+doğru vermemesiydi. Sonrasında belirtilen stok miktarını geçerek daha fazla ürün ekleyebildiğimi fark ettim. Sonra debugger ı
+addItem fonksiyonunda yetersiz stok error fırlattığımız if bloğuna hiç girmediğini fark ettim ve koşul ve mantığı değiştirdim:
+   . Birde stock sayısı azalmıyor onu da 43.satırda azalttım: product.stock -= quantity;.
+   Çarpım kısmınıda düzelttim return sum + item.price * item.quantity;. indirim kısmında yüzdesi yanlış verilmiş, düzeltim.
