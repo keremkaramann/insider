@@ -20,8 +20,9 @@ class ShoppingCart {
       if (!product) {
         throw new Error("Ürün bulunamadı!");
       }
+      console.log(product.stock);
 
-      if (product.stock <= quantity) {
+      if (product.stock < quantity) {
         // < yerine <= kullanıldı
         throw new Error("Yetersiz stok!");
       }
@@ -29,7 +30,7 @@ class ShoppingCart {
       const existingItem = this.items.find(
         (item) => item.productId === productId
       );
-
+      ("");
       if (existingItem) {
         existingItem.quantity += quantity;
       } else {
