@@ -20,9 +20,8 @@ class ShoppingCart {
       if (!product) {
         throw new Error("Ürün bulunamadı!");
       }
-      console.log(quantity);
+
       if (product.stock <= quantity) {
-        debugger;
         // < yerine <= kullanıldı
         throw new Error("Yetersiz stok!");
       }
